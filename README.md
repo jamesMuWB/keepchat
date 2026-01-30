@@ -297,7 +297,7 @@ npm run dev
 ## 联系方式
 
 - 作者: Muwenbin
-- 邮箱: muwenbin@example.com
+- 邮箱: james_2001_2001@163.com
 - 问题反馈: [GitHub Issues](https://github.com/muwenbin/keepchat/issues)
 - 讨论区: [GitHub Discussions](https://github.com/muwenbin/keepchat/discussions)
 
