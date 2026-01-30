@@ -1,0 +1,91 @@
+/**
+ * 七牛云配置示例文件
+ *
+ * 使用方法：
+ * 1. 复制此文件为 qiniu-config.json
+ * 2. 填写您的七牛云凭证信息
+ * 3. 将文件移动到 ~/.codebuddy/ 目录
+ *
+ * 获取凭证：
+ * - 注册账号: https://portal.qiniu.com/signup
+ * - 获取密钥: https://portal.qiniu.com/user/key
+ * - 创建存储空间: https://portal.qiniu.com/console/bucket
+ */
+
+{
+  /**
+   * 七牛云 AccessKey
+   * 在七牛云控制台的"密钥管理"页面获取
+   */
+  "accessKey": "your-access-key-here",
+
+  /**
+   * 七牛云 SecretKey
+   * 在七牛云控制台的"密钥管理"页面获取
+   * 注意：请妥善保管，不要泄露或提交到版本控制系统
+   */
+  "secretKey": "your-secret-key-here",
+
+  /**
+   * 存储空间名称 (Bucket)
+   * 在七牛云控制台创建的存储空间名称
+   */
+  "bucket": "codebuddy-sessions",
+
+  /**
+   * 存储区域代码
+   *
+   * 可选值：
+   * - z0: 华东 (推荐上海、江苏、浙江等地区用户)
+   * - z1: 华北 (推荐北京、天津等地区用户)
+   * - z2: 华南 (推荐广东、广西等地区用户)
+   * - na0: 北美 (推荐美国、加拿大用户)
+   * - as0: 东南亚 (推荐新加坡、马来西亚等地区用户)
+   */
+  "region": "z0",
+
+  /**
+   * 自定义 CDN 域名 (可选)
+   * 如果配置了自定义域名，请填写完整的 HTTPS 地址
+   * 示例: "https://cdn.your-domain.com"
+   */
+  "domain": null,
+
+  /**
+   * 上传配置
+   */
+  "upload": {
+    /**
+     * 分片上传阈值 (字节)
+     * 超过此大小的文件将使用分片上传
+     * 默认: 4MB
+     */
+    "chunkSize": 4194304,
+
+    /**
+     * 并发上传数量
+     * 同时上传的分片数量
+     */
+    "concurrent": 3,
+
+    /**
+     * 上传超时时间 (毫秒)
+     */
+    "timeout": 60000
+  },
+
+  /**
+   * 下载配置
+   */
+  "download": {
+    /**
+     * 下载超时时间 (毫秒)
+     */
+    "timeout": 60000,
+
+    /**
+     * 是否启用断点续传
+     */
+    "resumable": true
+  }
+}
